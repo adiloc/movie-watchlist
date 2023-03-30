@@ -1,0 +1,94 @@
+html,
+body {
+  background: #1c1c1c;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+h1,
+h4 {
+  color: white;
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+h4 {
+  font-size: 0.9em;
+  padding-top: 5px;
+}
+
+.container {
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#hero {
+  position: relative;
+  display: block;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  background: rgba(150, 150, 150);
+}
+
+.img-cover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.search {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -18px;
+}
+
+#search-el {
+  width: 340px;
+  padding: 0.7em 3.2em;
+  font-size: 0.9rem;
+  margin: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  appearance: none;
+  outline: none;
+  border: 0;
+  border-right: 1px solid rgb(37, 37, 37);
+  background: transparent url("/images/Icon.png") no-repeat 16px 12px;
+  background-color: rgb(255, 255, 255);
+  background-size: 18px;
+}
+
+#search-btn {
+  padding: 0.7em 2.5em;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: white;
+  border: none;
+  color: #363636;
+}
