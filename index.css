@@ -68,6 +68,11 @@ h4 {
   bottom: -18px;
 }
 
+#search-el,
+#search-btn {
+  border: 1px solid grey !important;
+}
+
 #search-el {
   width: 340px;
   padding: 0.7em 3.2em;
@@ -79,7 +84,7 @@ h4 {
   outline: none;
   border: 0;
   border-right: 1px solid rgb(37, 37, 37);
-  background: transparent url("/images/Icon.png") no-repeat 16px 12px;
+  background: transparent url("/images/icon.png") no-repeat 16px 12px;
   background-color: rgb(255, 255, 255);
   background-size: 18px;
 }
@@ -91,4 +96,21 @@ h4 {
   background: white;
   border: none;
   color: #363636;
+  border-left: none !important;
+}
+
+main {
+  background: white;
+  height: 100vh;
+}
+
+.start {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 300px 0;
+}
+.start h3 {
+  color: rgb(134, 134, 134);
 }
