@@ -18,7 +18,17 @@ function render () {
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        console.log(data.Ratings[0])
+        console.log(data.Title)
+
+        // function limit (string = '', limit = 0) {  
+        //   return string.substring(0, limit)
+        // }
+        
+        // const greeting = limit('Hello Marcus', 6)  
+        // // 'Hello '
+
+
+
         dataMovie.innerHTML += `
         <div class="movies">
         <img class="poster" src=${data.Poster}/>
@@ -45,5 +55,4 @@ function render () {
         })
       })
   })
-
-    }
+}
