@@ -8,13 +8,13 @@ document.getElementById('watchlist-btn').addEventListener('click', () => {
 
 function render () {
 
-  fetch(`http://www.omdbapi.com/?s=avatar&apikey=398f3ed5`)
+  fetch(`https://www.omdbapi.com/?s=blade&apikey=398f3ed5`)
   .then((res) => res.json())
   .then((data) => {
     const moviesArray = data.Search
     
     moviesArray.forEach((movie) => {
-      fetch(`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=398f3ed5`)
+      fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=398f3ed5`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
