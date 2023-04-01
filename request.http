@@ -1,1 +1,1 @@
-GET https://www.omdbapi.com/?s=avatar&apikey=398f3ed5
+GET https://www.omdbapi.com/?=avatar&apikey=398f3ed5
