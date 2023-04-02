@@ -1,14 +1,25 @@
-const dataMovie = document.getElementById("data")
-console.log(dataMovie)
+import Movie from "./Movie.js"
 
-document.getElementById('watchlist-btn').addEventListener('click', () => {
-  render()
-  document.getElementById('start').style.display = "none"
+let dataMovie = document.getElementById("data")
+
+
+function alert() {
+  console.log("mda")
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.dataset.clean){
+    alert(e.target.dataset.clean)
+  }
+  
 })
 
-function render () {
 
-  fetch(`https://www.omdbapi.com/?s=blade&apikey=398f3ed5`)
+document.getElementById('search-btn').addEventListener('click', () => {
+  const searchEl =document.getElementById('search-el').value.replace(' ', '+')
+  dataMovie.innerHTML = ''
+  
+  fetch(`https://www.omdbapi.com/?s=${searchEl}&apikey=398f3ed5`)
   .then((res) => res.json())
   .then((data) => {
     const moviesArray = data.Search
@@ -18,41 +29,13 @@ function render () {
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        console.log(data.Title)
-
-        // function limit (string = '', limit = 0) {  
-        //   return string.substring(0, limit)
-        // }
         
-        // const greeting = limit('Hello Marcus', 6)  
-        // // 'Hello '
-
-
-
-        dataMovie.innerHTML += `
-        <div class="movies">
-        <img class="poster" src=${data.Poster}/>
-        <div class="flex-container">
-            <span>
-              <p class="movie-title">${data.Title}</p>
-              <p class="movie-rating">⭐ ${data.imdbRating}</p>
-              </span>
-              <span>
-              <p class="movie-runtime">117 min</p>
-              <p class="movie-genre">Action/Drama/Sci-fi</p>
-              <span>
-              <img id="watchlist-add-btn" class="icon-watchlist" src="/images/icon-1.png">
-                <p class="watchlist">Watchlist</p>
-              </span>
-              </span>
-              <p class="movie-plot">
-              A blade runner must pursue and terminate four replicants who stole
-              a ship in space, and have returned to Earth to find their creator.
-              </p>
-              </div>
-          </div>
-          `
+        dataMovie.innerHTML += new Movie(data).getMovieHtml()
+        
         })
       })
   })
-}
+})
+
+
+

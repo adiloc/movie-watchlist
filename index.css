@@ -18,8 +18,9 @@ header {
   align-items: center;
 }
 
-h1,
-h4 {
+
+a,
+h1  {
   color: white;
 }
 
@@ -29,9 +30,11 @@ h1 {
   letter-spacing: -1.5px;
 }
 
-h4 {
+
+a {
   font-size: 0.9em;
   padding-top: 90px;
+  text-decoration: none;
 }
 
 .container {
@@ -78,7 +81,7 @@ h4 {
   appearance: none;
   outline: none;
   border: 0;
-  background: transparent url("/images/icon.png") no-repeat 16px 12px;
+  background: transparent url("/images/search.png") no-repeat 16px 12px;
   background-color: rgb(255, 255, 255);
   background-size: 18px;
 }
@@ -171,11 +174,22 @@ span {
   flex-direction: column;
 }
 
-.icon-watchlist {
-  height: 16px;
-  width: 16px;
+.icon-add,
+.watchlist-page {
+  width: 20px;
   cursor: pointer;
-  margin: 12px 0 0 30px;
+  margin: 8px 0 0 30px;
+  background-image: url("/images/icon-add.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.watchlist-page {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
 }
 
 @media (min-width: 400px) {
