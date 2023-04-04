@@ -13,7 +13,7 @@ class Movie {
             <p class="movie-rating">⭐ ${imdbRating}</p>
           </span>
           <span>
-            <p class="movie-runtime">${Runtime}min</p>
+            <p class="movie-runtime">${Runtime}</p>
             <p class="movie-genre">${Genre}</p>
             <span class="remove-btn">
               <span id="${imdbID}" class="icon-add icon-remove" data-remove=${imdbID}></span>
@@ -36,7 +36,7 @@ class Movie {
             <p class="movie-rating">⭐ ${imdbRating}</p>
           </span>
           <span>
-            <p class="movie-runtime">${Runtime}min</p>
+            <p class="movie-runtime">${Runtime}</p>
             <p class="movie-genre">${Genre}</p>
             <span class="add-btn remove-btn">
               <span id="${imdbID}" class="icon-add" data-add=${imdbID}></span>
