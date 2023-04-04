@@ -219,7 +219,6 @@ span {
 @media (min-width: 400px) {
   .container {
     width: 550px;
-    margin-top: 50px;
   }
 
   h4 {
@@ -260,8 +259,6 @@ span {
   }
   .movies {
     margin: 0 30px;
-  }
-  .flex-container {
   }
   .movie-genre {
     padding-left: 22px;
