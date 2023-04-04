@@ -1,5 +1,5 @@
 import Movie from "./Movie.js"
-import { removeWatchlist } from "./utilis.js"
+import { removeWatchlist } from "./utils.js"
 
 const dataMovie = document.getElementById("data")
 const start = document.getElementById("start")
