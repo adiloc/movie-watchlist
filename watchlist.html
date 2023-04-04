@@ -23,34 +23,25 @@
           />
         </div>
         <div class="header">
-          <h1 data-clean="clean" >My Watchlist</h1>
+          <h1 data-clean="clean">My Watchlist</h1>
           <h4 id="watchlist-btn"><a href="/#">Search for movies</a></h4>
         </div>
-        <nav>
-          <!-- <div class="search">
-            <input
-              type="search"
-              id="search-el"
-              name="search"
-              onfocus="this.value=''"
-              placeholder="Search for a movie"
-            />
-            <button id="search-btn">Search</button>
-          </div> -->
-        </nav>
+        <nav></nav>
       </header>
       <main>
-        <div id="data" class="data">
+        <div id="data" class="data"></div>
           <div id="start" class="start">
             <h3>Your watchlist is looking a little empty...</h3>
-            <div>
-              <div class="icon-add watchlist-page"></div>
-              <p class="start-watchlist">Let’s add some movies!</p>
+            <div class="start-watchlist">
+              <a href="/#">
+                <div class="icon-add watchlist-page"></div>
+              </a>
+                <h4 class="start-watchlist">Let’s add some movies!</h4>
             </div>
           </div>
         </div>
       </main>
     </div>
-    <script src="index.js" type="module"></script>
+    <script src="watchlist.js" type="module"></script>
   </body>
 </html>
